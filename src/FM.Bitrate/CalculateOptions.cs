@@ -17,13 +17,7 @@ namespace FM.Bitrate
         [Option('b', "bpp", Required = false, Default = 0.05, HelpText = "The bits-per-pixel.")]
         public double BitsPerPixel { get; set; }
 
-        [Option("min-bitrate", Required = false, Default = 100, HelpText = "The minimum bitrate.")]
-        public int MinimumBitrate { get; set; }
-
-        [Option("max-bitrate", Required = false, Default = 100000, HelpText = "The maximum bitrate.")]
-        public int MaximumBitrate { get; set; }
-
-        [Option("bitrate-exp", Required = false, Default = 0.75, HelpText = "The exponent to use for scaling the bits-per-pixel around the baseline width and height.")]
+        [Option('e', "bitrate-exp", Required = false, Default = 0.75, HelpText = "The exponent to use for scaling the bits-per-pixel around the baseline width and height.")]
         public double BitrateExponent { get; set; }
 
         [Option("baseline-width", Required = false, Default = 640, HelpText = "The baseline width for scaling the bits-per-pixel.")]
@@ -31,5 +25,11 @@ namespace FM.Bitrate
 
         [Option("baseline-height", Required = false, Default = 480, HelpText = "The baseline height for scaling the bits-per-pixel.")]
         public int BaselineHeight { get; set; }
+
+        [Option("min-bitrate", Required = false, Default = 100, HelpText = "The minimum bitrate.")]
+        public int MinimumBitrate { get; set; }
+
+        [Option("max-bitrate", Required = false, Default = 100000, HelpText = "The maximum bitrate.")]
+        public int MaximumBitrate { get; set; }
     }
 }

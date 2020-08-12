@@ -23,7 +23,7 @@ namespace FM.Bitrate
 
             bitrate = Math.Min(Math.Max(Options.MinimumBitrate, bitrate), Options.MaximumBitrate);
 
-            Console.Error.WriteLine($"{bitrate}kbps");
+            Console.Error.WriteLine($"{bitrate} kbps");
 
             return Task.FromResult(0);
         }
