@@ -46,7 +46,7 @@ fmbitrate [verb] [options]
   calculate  Calculates a bitrate.
 ```
 
-## analyze
+## calculate
 
 The `calculate` verb calculates an optimal bitrate for live video streaming.
 
