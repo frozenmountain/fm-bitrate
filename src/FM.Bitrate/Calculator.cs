@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace FM.Bitrate
@@ -14,20 +12,16 @@ namespace FM.Bitrate
             Options = options;
         }
 
-        private const double BitratePowerScale = 0.75;
-
         public Task<int> Run()
         {
-            var baselineWidth = 640;
-            var baselineHeight = 480;
-            var baselinePixelCount = baselineWidth * baselineHeight;
+            var baselinePixelCount = Options.BaselineWidth * Options.BaselineHeight;
             var baselineBitrate = baselinePixelCount * Options.FrameRate * Options.BitsPerPixel / 1000;
 
             var pixelCount = Options.Width * Options.Height;
             var pixelScale = (double)pixelCount / baselinePixelCount;
-            var bitrate = (int)Math.Ceiling(Math.Pow(pixelScale, BitratePowerScale) * baselineBitrate);
+            var bitrate = (int)Math.Ceiling(Math.Pow(pixelScale, Options.BitrateExponent) * baselineBitrate);
 
-            bitrate = Math.Min(Math.Max(100, bitrate), 100000);
+            bitrate = Math.Min(Math.Max(Options.MinimumBitrate, bitrate), Options.MaximumBitrate);
 
             Console.Error.WriteLine($"{bitrate}kbps");
 
