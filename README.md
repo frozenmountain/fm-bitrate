@@ -42,7 +42,7 @@ Use `dotnet fmbitrate.dll` instead of `fmbitrate` to run it.
 
 The `calculate` verb calculates an optimal bitrate for live video streaming.
 
-### Usage
+### Options
 
       -w, --width          Required. The width.
 
@@ -95,6 +95,6 @@ Going below that baseline to an input size of 320x240 will result in 163 kbps (v
 
 To learn more, visit [frozenmountain.com](https://www.frozenmountain.com).
 
-For inquiries, contact sales@frozenmountain.com.
+For inquiries, contact <mailto:sales@frozenmountain.com>.
 
 All contents copyright © Frozen Mountain Software.
