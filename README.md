@@ -1,6 +1,6 @@
 # FM Bitrate CLI
 
-![build](https://github.com/frozenmountain/fm-bitrate/workflows/build/badge.svg) ![license](https://img.shields.io/badge/License-MIT-yellow.svg) ![release](https://img.shields.io/github/v/release/frozenmountain/fm-bitrate.svg)
+![build](https://github.com/frozenmountain/fm-bitrate/workflows/build/badge.svg) ![code quality](https://app.codacy.com/project/badge/Grade/ffb280126f2645f482a329ad67c2bd40) ![license](https://img.shields.io/badge/License-MIT-yellow.svg) ![release](https://img.shields.io/github/v/release/frozenmountain/fm-bitrate.svg)
 
 The FM Bitrate CLI lets you calculate optimal bitrates for live video streams.
 
